@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbanist-Light;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(imageabout.jpg);
+    color: #3a3a3a;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header{
+    width: 100%;
+    background-color: #56649a;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header .logo{
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: DancingScript;
+}
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    font-weight: 500;
+}
+.menu ul {
+    list-style: none;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+.menu ul li a:hover {
+    background-color: #f5980d;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    margin: 1cm;
+}
+.text{
+    max-width: 60%;
+    margin: 1cm;
+}
+.text ul li{
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-style: oblique;
+    color: #3a3a3a;
+}
+.text p{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+@font-face {
+  font-family: DancingScript;
+  src: url(DancingScript-Medium.ttf);
+}
+@font-face {
+  font-family: Urbanist-Light;
+  src: url(Urbanist-Light.ttf);
+}

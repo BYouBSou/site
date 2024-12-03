@@ -1,0 +1,110 @@
+header{
+    width: 100%;
+    background-color: #56649a;
+    max-width: 100%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header .logo{
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: DancingScript;
+}
+header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    font-weight: 500;
+}
+.menu ul {
+    list-style: none;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+.menu ul li a:hover {
+    background-color: #f5980d;
+    border-radius: 5px;
+}
+@font-face {
+    font-family: DancingScript;
+    src: url(DancingScript-Medium.ttf);
+}
+
+@font-face {
+    font-family: Urbanist-Light;
+    src: url(Urbanist-Light.ttf);
+}
+
+.artwork-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.artwork-container img {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.artwork-description {
+    flex: 1;
+}
+
+.artwork-description h3 {
+    font-size: 1.5rem;
+    color: #56649a;
+    margin-bottom: 10px;
+}
+
+.artwork-description p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    .artwork-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .artwork-container img {
+        width: 100%;
+    }
+}
+
+

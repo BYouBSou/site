@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<link rel="icon" href="Logo.png">
+<header class="header">
+    <a href="#" class="logo">ART Station</a>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">À propos</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div>
+        <h2>S'identifier</h2>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username"><br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" name="password" id="password"><br>
+        <button id="loginBtn">Connexion</button>
+        <p>Si vous n'avez pas encore un compte.<br> <a href="register.html" class="e">S'inscrire içi</a></p>
+    </div>
+
+    <script>
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+        }
+
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            const username = document.getElementById("username").value;
+
+            if (username) {
+                setCookie("username", username, 7); 
+
+                window.location.href = "index.html";
+            } else {
+                alert("Veuillez saisir un nom d'utilisateur.");
+            }
+        });
+    </script>
+</body>
+</html>
